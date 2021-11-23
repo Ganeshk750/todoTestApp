@@ -16,7 +16,7 @@ public class ToDo {
 	@Id
 	@GeneratedValue
 	private Integer id;
-	private String text;
+	private String title;
 	private boolean done;
 
 }
