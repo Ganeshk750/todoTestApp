@@ -3,6 +3,7 @@ package com.ganesh.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -44,11 +45,9 @@ public class ToDoController {
 		return this.service.updateToDo(totoId, toDo);
 	}
 	
-	@RequestMapping(path = "/delete/{tid}",method = RequestMethod.DELETE)
+	@DeleteMapping("/delete/{tid}")
 	public String delete(@PathVariable("tid") Integer id) {
-		System.out.println("from delete");
-		service.deleteToDoById(id);
-		return "Delete Sucessfully";
+		return this.service.deleteToDoById(id);
 		
 	}
 	

@@ -11,6 +11,6 @@ public interface ToDoService {
 	public java.util.List<ToDo> listOfToDo();
 	public Optional<ToDo> getOneToDo(Integer todoId);
 	public Optional<ToDo> updateToDo(Integer todoId, ToDo todo);
-	public Integer deleteToDoById(int theId);
+	public String deleteToDoById(int theId);
 
 }

@@ -42,9 +42,9 @@ public class ToDoServiceImpl implements ToDoService {
 	}
 
 	@Override
-	public Integer deleteToDoById(int theId) {
+	public String deleteToDoById(int theId) {
 		repository.deleteById(theId);
-		return theId;
+		return "Delete Sucessfully";
 	}
 	
 }
