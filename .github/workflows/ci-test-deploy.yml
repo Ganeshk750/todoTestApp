@@ -1,0 +1,20 @@
+
+name: ci-test-deploy
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up JDK 1.8
+      uses: actions/setup-java@v2
+      with:
+       heroku_api_key: ${{secret.HREOKU_API_KEY}}
+       heroku_email: ${{secret.HEROKU_EMAIL}}
+       heroku_app_name: ${{secret.HEROKU_APP}}
