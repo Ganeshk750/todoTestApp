@@ -3,12 +3,14 @@ package com.ganesh.controller;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.ganesh.model.ToDo;
@@ -42,5 +44,12 @@ public class ToDoController {
 	public Optional<ToDo> getOneToDo(@PathVariable("todoId") Integer totoId, @RequestBody ToDo toDo) {
 		return this.service.updateToDo(totoId, toDo);
 	}
+	
+	@DeleteMapping("/delete/{tid}")
+	public String delete(@PathVariable("tid") Integer id) {
+		return this.service.deleteToDoById(id);
+		
+	}
+	
 
 }
