@@ -15,6 +15,6 @@ jobs:
     - name: Deploy to Heroku
       uses: AkhileshNS/heroku-deploy@v3.8.8
       with:
-       heroku_api_key: ${{secret.HREOKU_API_KEY}}
-       heroku_email: ${{secret.HEROKU_EMAIL}}
-       heroku_app_name: ${{secret.HEROKU_APP}}
+       heroku_api_key: ${{secrets.HREOKU_API_KEY}}
+       heroku_email: ${{secrets.HEROKU_EMAIL}}
+       heroku_app_name: ${{secrets.HEROKU_APP}}
