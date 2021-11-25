@@ -4,9 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.ganesh.model.ToDo;
 import com.ganesh.repository.ToDoRepository;
@@ -18,7 +15,9 @@ import lombok.var;
 @RequiredArgsConstructor
 public class ToDoServiceImpl implements ToDoService {
 	
+	
 	private final ToDoRepository repository;
+	
 
 	@Override
 	public ToDo newTodo(ToDo todo) {
@@ -27,7 +26,7 @@ public class ToDoServiceImpl implements ToDoService {
 
 	@Override
 	public List<ToDo> listOfToDo() {
-		return this.repository.findAll();
+		return this.repository.findAll();		
 	}
 
 	@Override
