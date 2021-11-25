@@ -11,7 +11,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name = "todo")
 @Data
 @NoArgsConstructor
 public class ToDo implements Serializable {
