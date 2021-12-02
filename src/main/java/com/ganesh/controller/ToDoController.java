@@ -23,7 +23,7 @@ import com.ganesh.service.ToDoService;
 import lombok.RequiredArgsConstructor;
 
 
-@CrossOrigin("*")
+
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("todos")
