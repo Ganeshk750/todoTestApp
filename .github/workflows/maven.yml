@@ -3,7 +3,7 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ main ]
+    branches: [ prod ]
 
 jobs:
    build:
@@ -61,7 +61,7 @@ jobs:
        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
        heroku_email: ${{secrets.HEROKU_EMAIL}}
        heroku_app_name: ${{secrets.HEROKU_APP}}
-       branch: main
+       branch: prod
        
     
  
