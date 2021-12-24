@@ -26,11 +26,15 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 @Api(value="CRUD TODO REST APIs")
 =======
 
 
 >>>>>>> e3d4be39784ba773d5c207f44b557db30a59183a
+=======
+@Api(value="CRUD TODO REST APIs")
+>>>>>>> df3c1a5afcfb75398a35ee7632eec3ce7bfd5abc
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("todos")
