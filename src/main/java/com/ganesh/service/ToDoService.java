@@ -10,8 +10,8 @@ public interface ToDoService {
 	
 	public ToDo newTodo(ToDo todo);
 	public List<ToDo> listOfToDo();
-	public Optional<ToDo> getOneToDo(Integer todoId);
+	public ToDo getOneToDo(Integer todoId);
 	public Optional<ToDo> updateToDo(Integer todoId, ToDo todo);
-	public String deleteToDoById(int theId);
+	public String deleteToDoById(int todoId);
 
 }

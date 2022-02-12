@@ -30,9 +30,9 @@ public class ToDoServiceImpl implements ToDoService {
 	}
 
 	@Override
-	public Optional<ToDo> getOneToDo(Integer todoId) {
-	    var todo = this.repository.findById(todoId);
-		return todo;
+	public ToDo getOneToDo(Integer todoId) {
+	    Optional<ToDo> todo = this.repository.findById(todoId);
+		return todo.get();
 	}
 
 	@Override
@@ -41,8 +41,8 @@ public class ToDoServiceImpl implements ToDoService {
 	}
 
 	@Override
-	public String deleteToDoById(int theId) {
-		repository.deleteById(theId);
+	public String deleteToDoById(int todoId) {
+		repository.deleteById(todoId);
 		return "Delete Sucessfully";
 	}
 	

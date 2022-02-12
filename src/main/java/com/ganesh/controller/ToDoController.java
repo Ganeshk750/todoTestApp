@@ -25,16 +25,8 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-@Api(value="CRUD TODO REST APIs")
-=======
 
-
->>>>>>> e3d4be39784ba773d5c207f44b557db30a59183a
-=======
 @Api(value="CRUD TODO REST APIs")
->>>>>>> df3c1a5afcfb75398a35ee7632eec3ce7bfd5abc
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("todos")
@@ -66,7 +58,7 @@ public class ToDoController {
 	@ApiOperation(value="Get TODO Besed On Ids TODO APIs")
 	@GetMapping("/{todoId}")
 	public ResponseEntity<DtoToDo> getOneToDo(@PathVariable("todoId") Integer totoId) {
-		Optional<ToDo> todo = this.service.getOneToDo(totoId);
+		ToDo todo = this.service.getOneToDo(totoId);
 		DtoToDo Response = modelMapper.map(todo, DtoToDo.class);
 		return ResponseEntity.ok().body(Response);
 	}
